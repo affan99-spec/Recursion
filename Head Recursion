@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+void fun(int n) {
+    
+    if(n>0)
+    {
+        fun(n-1); // first call the function then after written anything which you want 
+        printf("%d ", n);
+    }
+}
+
+int main()
+{
+    int x;
+    cout<<"Enter the element : ";
+    cin>>x;
+    fun(x);
+    return 0;
+}
