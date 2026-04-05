@@ -1,0 +1,42 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
+// ************* Factorial of a number using Recursion *************************
+
+int fun(int n)
+{
+    if(n == 0)
+    {
+        return 1;
+    }
+    return fun(n-1) * n;
+}
+
+int main()
+{
+    int x, i, fact;
+    cout<<"Enter the element: ";
+    cin>>x;
+    fact = fun(x);
+    cout<<"The Factorial is: "<<fact<<endl; 
+    return 0;
+}
+
+// **************** Factorial of a number using Loop ***************************
+
+int main()
+{
+    int x, i, fact=1;
+    cout<<"Enter the element: ";
+    cin>>x;
+    for(i=1; i<=x; i++)
+    {
+        fact = fact * i;
+    }
+    cout<<"The Factorial of a number "<<x<<" is: "<<fact<<endl;
+    return 0;
+}
