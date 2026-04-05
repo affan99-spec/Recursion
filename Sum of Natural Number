@@ -1,0 +1,54 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
+// ************* Sum of Natural number using Recursion *************************
+
+int fun(int n)
+{
+    if(n == 0)
+    {
+        return 0;
+    }
+    return fun(n-1) + n;
+}
+
+int main()
+{
+    int x, i, sum;
+    cout<<"Enter the element: ";
+    cin>>x;
+    sum = fun(x);
+    cout<<"Total Sum is: "<<sum<<endl; 
+    return 0;
+}
+
+// ******************* Sum of Natural number using Formula *********************
+
+int main()
+{
+    int n, sum;
+    cout<<"Enter the element: ";
+    cin>>n;
+    sum = (n * (n+1)) / 2;
+    cout<<"Total Sum is: "<<sum<<endl;
+    return 0;
+}
+
+// **************** Sum of Natural number using Loop ***************************
+
+int main()
+{
+    int x, i, sum=0;
+    cout<<"Enter the element: ";
+    cin>>x;
+    for(i=1; i<=x; i++)
+    {
+        sum = sum + i;
+    }
+    cout<<"Total Sum is: "<<sum<<endl;
+    return 0;
+}
