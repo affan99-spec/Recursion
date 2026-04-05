@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
+// ************* Power of a number using Recursion *************************
+
+int power(int m, int n)
+{
+    if(n==0)
+    {
+        return 1;
+    }
+    return power(m, n-1)*m;
+}
+
+int main()
+{
+    int x, y, val;
+    cout<<"Enter the value is: ";
+    cin>>x>>y;
+    val = power(x, y);
+    cout<<"Value is: "<<val<<endl;
+    return 0;
+}
