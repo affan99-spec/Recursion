@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+
+int sum_digit(int n)
+{
+    if(n==0) {
+        return 0;
+    }
+    return n%10 + sum_digit(n/10);
+}
+
+int main()
+{
+    int x;
+    scanf("%d", &x);
+    int sum = sum_digit(x);
+    printf("The sum is : %d\n", sum);
+    return 0;
+}
